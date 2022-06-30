@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stake Crash History</title>
+    <link rel="shortcut icon" href="github-icon-32px.png">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="up-right">
+        <a title="GitHub" href="https://github.com/Zennos/blaze-crash-history" target="_blank">
+            <img src="github-icon-32px.png" alt="View On GitHub">
+        </a>
+        <a title="Pix" href='https://nubank.com.br/pagar/xldsq/rfgW3dODQh' target='_blank'>
+            <img src='https://logospng.org/download/pix/logo-pix-icone-512.png' alt='Pix' />
+        </a>
+        <a title="Ko-fi" href='https://ko-fi.com/edoan' target='_blank'>
+            <img src='https://ko-fi.com/img/ko-fi-logo.png' style="border-radius: 50%;" alt='Ko-fi' />
+        </a>
+        <a title="Paypal" href='https://www.paypal.com/donate?hosted_button_id=68QJ5UGN25LXU' target='_blank'>
+            <img src='https://i.imgur.com/A0I7fFT.png' alt='Paypal' />
+        </a>
+    </div>
+
+    <div id="crashes_count" class="bottom-left hide"></div>
+    <div class="middle">
+        <a class="top-logo" href="https://stake.games/casino/games/crash" target=”_blank”>
+            <img src="stake.png" alt="Stake.com">
+            <div>Crash History</div>
+        </a>
+        <input id="seed_input" type="text" placeholder="Enter the hash">
+        <div class="options">
+            <label for="amount_input">Amount:</label>
+            <input id="amount_input" type="number" min="0">
+            <label for="good_value_input">Highlight crashes above or equal to:</label>
+            <input id="good_value_input" type="number" min="0">
+            <div style="display: inline;">X</div>
+        </div>
+        <button id="update_button" class="hide">Update</button>
+        <div id="statistics" class="hide"></div>
+        <div id="loading"></div>
+        <div id="results"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
