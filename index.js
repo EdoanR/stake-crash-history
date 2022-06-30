@@ -72,34 +72,6 @@ function OnInputChange(byButton = false) {
     localStorage.setItem('goodValue', goodValue);
 }
 
-function Update() {
-let seed = seedInput.value;
-
-    let amount = parseInt(amountInput.value);
-    if (!amount && amount !== 0) amount = 100;
-
-    HandleUpdateButtonVisibility(amount);
-
-    let goodValue = parseFloat(goodValueInput.value);
-    if (!goodValue && goodValue !== 0) goodValue = 2;
-
-    if (amount < 800) {
-        GetChain(seed, amount, goodValue);
-    } else {
-        clearTimeout(timeout);
-        loadingDiv.innerHTML = 'Loading...';
-        timeout = setTimeout(() => {
-            GetChain(seed, amount, goodValue);
-            loadingDiv.innerHTML = '';
-        }, 500);
-    }
-
-    UpdateSelectionWindow();
-
-    localStorage.setItem('amount', amount);
-    localStorage.setItem('goodValue', goodValue);
-}
-
 function GetChain(seed, amount = 1000, goodValue = 2) {
     resultsDiv.innerHTML = '';
 
