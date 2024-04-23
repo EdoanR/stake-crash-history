@@ -107,6 +107,11 @@ label {
 	font-weight: 600;
 }
 
+.checkbox-container label,
+.checkbox-container input {
+	vertical-align: middle;
+}
+
 .options {
 	margin-top: 10px;
 }

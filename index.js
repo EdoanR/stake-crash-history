@@ -2,19 +2,20 @@ const resultsDiv = document.querySelector('#results');
 const loadingDiv = document.querySelector('#loading');
 const statisticsDiv = document.querySelector('#statistics');
 const seedInput = document.querySelector('#seed_input');
+const usBlockHashCheckbox = document.querySelector('#use_stake_us_block_hash');
 const updateButton = document.querySelector('#update_button');
 const crashesCount = document.querySelector('#crashes_count');
 
 const blockHash = '0000000000000000001b34dc6a1e86083f95500b096231436e9b25cbdd0075c4';
+const usBlockHash = '000000000000000000066448f2f56069750fc40c718322766b6bdf63fdcf45b8';
 
 const amountInput = document.querySelector('#amount_input');
 const goodValueInput = document.querySelector('#good_value_input');
 
-let storageAmount = localStorage.getItem('amount');
-amountInput.value = storageAmount ? storageAmount : 100;
-
-let storageGoodValue = localStorage.getItem('goodValue');
-goodValueInput.value = storageGoodValue ? storageGoodValue : 2;
+// loading values.
+amountInput.value = localStorage.getItem('amount') ?? 100;
+goodValueInput.value = localStorage.getItem('goodValue') ?? 2;
+usBlockHashCheckbox.checked = localStorage.getItem('usBlockHash') == 'true';
 
 let timeout = null;
 
@@ -35,9 +36,24 @@ seedInput.addEventListener('input', (ev) => {
 });
 amountInput.addEventListener('input', (ev) => {
 	OnInputChange();
+
+	const amount = parseInt(amountInput.value);
+
+	if (isNaN(amount)) return;
+	localStorage.setItem('amount', amount);
 });
 goodValueInput.addEventListener('input', (ev) => {
 	OnInputChange();
+
+	const goodValue = parseFloat(goodValueInput.value);
+
+	if (isNaN(goodValue)) return;
+	localStorage.setItem('goodValue', goodValue);
+});
+usBlockHashCheckbox.addEventListener('change', (ev) => {
+	OnInputChange();
+
+	localStorage.setItem('usBlockHash', usBlockHashCheckbox.checked);
 });
 
 updateButton.addEventListener('click', (ev) => {
@@ -74,9 +90,6 @@ function OnInputChange(byButton = false) {
 	}
 
 	UpdateSelectionWindow();
-
-	localStorage.setItem('amount', amount);
-	localStorage.setItem('goodValue', goodValue);
 }
 
 function GetChain(seed, amount = 1000, goodValue = 2) {
@@ -98,7 +111,7 @@ function GetChain(seed, amount = 1000, goodValue = 2) {
 
 	const seedToPoint = (seed, i) => {
 		const hmac = CryptoJS.algo.HMAC.create(CryptoJS.algo.SHA256, seed);
-		hmac.update(blockHash);
+		hmac.update(usBlockHashCheckbox.checked ? usBlockHash : blockHash);
 
 		const hex = hmac.finalize().toString(CryptoJS.enc.Hex).substring(0, 8);
 		const dec = parseInt(hex, 16);
