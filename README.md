@@ -4,7 +4,7 @@ Show previous crashes from a hash seed.
 
 ## Where?
 
-Here: https://zennos.github.io/stake-crash-history/index.html
+Here: https://edoanr.github.io/stake-crash-history/index.html
 
 ## Support Me ❤
 
