@@ -1,170 +1,171 @@
 body {
-    background-color: #1A2C38;
-    color: #B8BFC3;
-    font-family: "proxima-nova",sans-serif;
-    margin-top: 2%;
-    margin-bottom: 2%;
+	background-color: #1a2c38;
+	color: #b8bfc3;
+	font-family: 'proxima-nova', sans-serif;
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 
 a {
-    color: aqua;
+	color: aqua;
 }
 
 button {
-    border: 0;
-    color: #013E01;
-    background-color: #17d117;
-    font-weight: 600;
-    font-size: 20px;
-    border-radius: 6px;
-    padding: 5px;
-    cursor: pointer;
+	border: 0;
+	color: #013e01;
+	background-color: #17d117;
+	font-weight: 600;
+	font-size: 20px;
+	border-radius: 6px;
+	padding: 5px;
+	cursor: pointer;
 }
 
 button:hover {
-    background-color: #1bd61b;
+	background-color: #1bd61b;
 }
 
 button:active {
-    background-color: #18aa18;
+	background-color: #18aa18;
 }
 
 .up-right {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    position: fixed;
-    top: 10px;
-    right: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	position: fixed;
+	top: 10px;
+	right: 10px;
 }
 
 .up-right img {
-    width: 32px;
-    height: 32px;
+	width: 32px;
+	height: 32px;
 }
 
 .bottom-left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 2vw;
-    background-color: #0a151c;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding: 1%;
-    margin-bottom: 1%;
-    margin-left: 1%;
-    border-radius: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 2vw;
+	background-color: #0a151c;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 1%;
+	margin-bottom: 1%;
+	margin-left: 1%;
+	border-radius: 10%;
 }
 
 .hide {
-    display: none;
+	display: none;
 }
 
 .middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .top-logo {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 10px;
-    text-decoration: none;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 10px;
+	text-decoration: none;
 }
 
 .top-logo img {
-    width: 168px;
+	width: 168px;
 }
 
 .top-logo div {
-    text-align: center;
-    font-weight: 600;
-    color: #E6E7E8;
+	text-align: center;
+	font-weight: 600;
+	color: #e6e7e8;
 }
 
 input {
-    height: 30px;
-    font-size: 18px;
-    background-color: #0a151c;
-    border: 0;
-    color: #E6E7E8;
-    text-align: center;
-    outline: 0;
-    border-radius: 3px;
+	height: 30px;
+	font-size: 18px;
+	background-color: #0a151c;
+	border: 0;
+	color: #e6e7e8;
+	text-align: center;
+	outline: 0;
+	border-radius: 3px;
 }
 
 #seed_input {
-    width: 635px;
-    font-size: 16px;
+	width: 635px;
+	font-size: 16px;
 }
 
 label {
-    font-weight: 600;
+	font-weight: 600;
 }
 
 .options {
-    margin-top: 10px;
+	margin-top: 10px;
 }
 .options input {
-    width: 100px;
+	width: 100px;
 }
 
 #update_button {
-    width: 300px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+	width: 300px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 #statistics {
-    font-weight: 600;
-    margin-top: 5px;
+	font-weight: 600;
+	margin-top: 5px;
 }
 
 span.good {
-    color: #04D47C;
+	color: #04d47c;
 }
 
 span.bad {
-    color: #f57373;
+	color: #f57373;
 }
 
 #loading {
-    margin-top: 10px;
+	margin-top: 10px;
 }
 
 #results {
-    display: grid;
-    margin-top: 10px;
-    width: 706px;
-    grid-template-columns: repeat(auto-fill, 66px);
-    grid-gap: 5px;
+	display: grid;
+	margin-top: 10px;
+	width: 706px;
+	grid-template-columns: repeat(auto-fill, 66px);
+	grid-gap: 5px;
 }
 
 .crash {
-    margin: 5px;
-    background-color: #2F4553;
-    color: #D5DCEB;
-    text-align: center;
-    font-weight: 600;
-    border-radius: 25%;
-    padding: 5px;
-    min-width: 50px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	margin: 5px;
+	background-color: #2f4553;
+	color: #d5dceb;
+	text-align: center;
+	font-weight: 600;
+	border-radius: 25%;
+	padding: 5px;
+	min-width: 50px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .crash.bom {
-    background-color: #00E701;
-    color: #013E01;
+	background-color: #00e701;
+	color: #013e01;
 }
 
-.crash.ui-selected, .crash.ui-selecting {
-    outline: solid 2px #0079ff;
+.crash.ui-selected,
+.crash.ui-selecting {
+	outline: solid 2px #0079ff;
 }
