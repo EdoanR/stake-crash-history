@@ -2,14 +2,15 @@
 
 Show previous crashes from a hash seed.
 
-## Where?
+# Where?
 
 Here: https://edoanr.github.io/stake-crash-history/index.html
 
-## Support Me ❤
+# Support me
 
-<a href='https://nubank.com.br/pagar/xldsq/rfgW3dODQh' target='_blank'><img height='35' style='border:0px;height:46px;' src='https://logospng.org/download/pix/logo-pix-icone-512.png' border='0' alt='Pix' />
-<a href='https://ko-fi.com/edoan' target='_blank'><img height='35' style='border:0px;height:46px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' />
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=68QJ5UGN25LXU)
+[![Ko-fi](https://i.imgur.com/4R7kMKs.png)](https://ko-fi.com/edoan)
+[![Paypal](https://i.imgur.com/lk4PK9N.png)](https://www.paypal.com/donate/?hosted_button_id=AP5M7UXBWR47C)
+[![Pix](https://i.imgur.com/boVAYXr.png)](https://nubank.com.br/pagar/xldsq/rfgW3dODQh)
+[![Patreon](https://i.imgur.com/0z43sFK.png)](https://www.patreon.com/EdoanDev)
 
-### Please be careful with your money.
+### Please, be careful with your money.
